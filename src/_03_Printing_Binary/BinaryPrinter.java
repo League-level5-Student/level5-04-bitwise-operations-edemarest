@@ -58,6 +58,14 @@ public class BinaryPrinter {
 	}
 	
 	public void printLongBinary(long l) {
-		
+		byte a= (byte)(l >> 8);
+		byte b= (byte)(l & 0b11111111);
+		System.out.println("");
+		  for(int i = 7; i >= 0; i--) {
+			  System.out.print((a>>i) & 1);
+		  }
+		  for(int i = 7; i >= 0; i--) {
+			  System.out.print((b>>i) & 1);
+		  }
 	}
 }
